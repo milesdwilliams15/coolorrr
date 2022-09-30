@@ -3,16 +3,19 @@
 library(hexSticker)
 library(UCSCXenaTools)
 library(tidyverse)
+library(coolorrr)
 library(here)
+set_palette()
 
 p <-
   ggplot(mtcars) +
-  aes(wt, mpg, color = as.factor(cyl)) +
-  geom_point() +
+  aes(mpg, fill = as.factor(cyl)) +
+  geom_density(alpha = 0.5) +
   labs(
     x = NULL,
     y = NULL
   ) +
+  ggpal(aes = "fill") +
   theme_minimal() +
   theme(
     axis.ticks = element_blank(),
@@ -31,7 +34,7 @@ sticker(
   p_x = 1,
   p_y = 1,
   p_color = "royalblue",
-  h_fill = "darkgrey",
+  h_fill = "white",
   h_color = "royalblue",
   url = "https://github.com/milesdwilliams15/coolorrr",
   filename = here("inst", "logo.png")
