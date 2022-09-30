@@ -10,7 +10,9 @@ set_palette()
 p <-
   ggplot(mtcars) +
   aes(mpg, fill = as.factor(cyl)) +
-  geom_density(alpha = 0.5) +
+  geom_density(alpha = 0.7,
+               color = "grey90",
+               size = 0.5) +
   labs(
     x = NULL,
     y = NULL
