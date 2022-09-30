@@ -30,7 +30,7 @@ The first function must be run before you can use `ggpal()`. It sets up four pal
   - A sequential palette
   - A qualitative palette for two cases
   
-The function is meant to make working with color palettes you can make for free at [https://coolors.co/](https://coolors.co/) easy and straightforward. After you make a color palette or choose from the selection of popular choices on the site, simply copy the url for the page, paste it as a character string to the relevant palette type in `set_theme()` and run it. `ggpal()` will then apply your chosen theme for the relevant palette type.
+The function is meant to make working with color palettes you can make for free at [https://coolors.co/](https://coolors.co/) easy and straightforward. After you make a color palette or choose from the selection of popular choices on the site, simply copy the url for the page, paste it as a character string to the relevant palette type in `set_palette()` and run it. `ggpal()` will then apply your chosen theme for the relevant palette type.
 
 ## Example
 
