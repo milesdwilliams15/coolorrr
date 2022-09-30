@@ -9,16 +9,43 @@
 
 A package to support easy porting and usage of custom color palettes for ggplot.
 
+## Installation
+
+```
+# install.packages("devtools")
+devtools::install_github("milesdwilliams15/coolorrr")
+```
+
+## Usage
+
+The `{coolorrr}` package provides tools to make the process of porting and using custom color palettes with `ggplot()` easier. The main functions are:
+
+  - `set_palette()`
+  - `ggpal()`
+  
+The first function must be run before you can use `ggpal()`. It sets up four palettes (with default selections for each):
+
+  - A qualitative palette
+  - A diverging palette
+  - A sequential palette
+  - A qualitative palette for two cases
+  
+The function is meant to make working with color palettes you can make for free at [https://coolors.co/](https://coolors.co/) easy and straightforward. After you make a color palette or choose from the selection of popular choices on the site, simply copy the url for the page, paste it as a character string to the relevant palette type in `set_theme()` and run it. `ggpal()` will then apply your chosen theme for the relevant palette type.
+
+## Example
+
 ```
 library(ggplot2)
 library(coolorrr)
 
-set_palette()
-ggplot(mtcars) +
+set_palette() # with defaults
+p <- ggplot(mtcars) +
   aes(x = wt,
       y = mpg,
       color = as.factor(cyl)) +
-  geom_point() +
+  geom_point() # basic output
+  
+p + # custom output with ggpal()
   ggpal(type = "qualitative",
         aes = "color")
 ```
