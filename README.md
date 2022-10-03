@@ -62,6 +62,12 @@ set_palette(qualitative = c("royalblue", "firebrick", "forestgreen", "gold", "or
             from_coolors = FALSE)
 ```
 
+After you've set your palettes, you can use `ggpal()` using the `+ ggpla()` syntax to update the default palettes used by `ggplot()` for aesthetic color or fill mapping. `ggpal()` as three basic commands and also allows you to pass any other commands to standard `{ggplot2}` functions that `ggpal()` calls under the hoold.
+
+  - `type`: specifies whether the palette to apply is for the qualitative, divering, sequential, or binary palette;
+  - `aes`: specifies whether the palette should be applied for the color or fill aesthetic;
+  - `midpoint`: specifies the midpoint value if the divering palette is used.
+
 ## Example
 
 ```
@@ -79,3 +85,6 @@ p + # custom output with ggpal()
   ggpal(type = "qualitative",
         aes = "color")
 ```
+
+![image](https://user-images.githubusercontent.com/23504082/193629482-62f1283c-05b5-4394-8cc4-5a92a8cb73b2.png)
+
