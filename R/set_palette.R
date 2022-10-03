@@ -33,13 +33,13 @@ set_palette <- function(
   if(is.null(sequential)) {
     sequ <<- coolors("https://coolors.co/eff1f3-265a73")
   } else {
-    if(from_coolors) sequ <<- coolors(sequential) else qual <<- sequential
+    if(from_coolors) sequ <<- coolors(sequential) else sequ <<- sequential
     if(length(sequ)!=2) stop("Sequential palette must have 2 colors! You have: ", length(sequ))
   }
   if(is.null(binary)) {
     dual <<- coolors("https://coolors.co/faa916-265a73")
   } else {
-    if(from_coolors) dual <<- coolors(binary) else qual <<- binary
+    if(from_coolors) dual <<- coolors(binary) else dual <<- binary
     if(length(dual)!=2) stop("Binary palette must have 2 colors! You have: ", length(dual))
   }
 }
