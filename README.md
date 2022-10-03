@@ -54,7 +54,9 @@ set_palette(qualitative = c("royalblue", "firebrick", "forestgreen", "gold", "or
             from_coolors = FALSE)
 ```
 
-Note: if you are setting multiple custom palettes, all those palettes must be in the same format---i.e., either all must be from coolors.co or a vector of hexidecimal color codes or color names. If you wanted to have a mixed palette, you can use the `coolors()` function on the url from coolors.co to extract the color codes and convert them to a vector. For instance, say we were to set the qualitative palette using color names and the two-case qualitative palette as a custom palette set at coolors.co. We would write:
+Note: if you are setting multiple custom palettes, all those palettes must be in the same format---i.e., either all must be from coolors.co or a vector of hexidecimal color codes or color names. If you wanted to have a mixed palette, you can use the `coolors()` function on the url from coolors.co to extract the color codes and convert them to a vector. 
+
+For instance, say we were to set the qualitative palette using color names and the two-case qualitative palette as a custom palette set at coolors.co. We would write:
 
 ```
 set_palette(qualitative = c("royalblue", "firebrick", "forestgreen", "gold", "orange"),
@@ -62,7 +64,7 @@ set_palette(qualitative = c("royalblue", "firebrick", "forestgreen", "gold", "or
             from_coolors = FALSE)
 ```
 
-After you've set your palettes, you can use `ggpal()` using the `+ ggpla()` syntax to update the default palettes used by `ggplot()` for aesthetic color or fill mapping. `ggpal()` as three basic commands and also allows you to pass any other commands to standard `{ggplot2}` functions that `ggpal()` calls under the hoold.
+After you've set your palettes, you can use `ggpal()` using the `+ ggpla()` syntax to update the default palettes used by `ggplot()` for aesthetic color or fill mapping. `ggpal()` has three basic commands and also allows you to pass any other commands to standard `{ggplot2}` functions that `ggpal()` calls under the hoold.
 
   - `type`: specifies whether the palette to apply is for the qualitative, divering, sequential, or binary palette;
   - `aes`: specifies whether the palette should be applied for the color or fill aesthetic;
