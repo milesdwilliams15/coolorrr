@@ -80,7 +80,11 @@ p <- ggplot(mtcars) +
       y = mpg,
       color = as.factor(cyl)) +
   geom_point() # basic output
-  
+```
+
+![image](https://user-images.githubusercontent.com/23504082/193629762-de378e56-1395-4cb6-9422-59ce82d18dda.png)
+
+```
 p + # custom output with ggpal()
   ggpal(type = "qualitative",
         aes = "color")
