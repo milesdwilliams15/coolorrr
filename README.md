@@ -22,6 +22,7 @@ The `{coolorrr}` package provides tools to make the process of porting and using
 
   - `set_palette()`
   - `ggpal()`
+  - `coolors()`
   
 The first function must be run before you can use `ggpal()`. It sets up four palettes (with default selections for each):
 
@@ -30,7 +31,36 @@ The first function must be run before you can use `ggpal()`. It sets up four pal
   - A sequential palette
   - A qualitative palette for two cases
   
-The function is meant to make working with color palettes you can make for free at [https://coolors.co/](https://coolors.co/) easy and straightforward. After you make a color palette or choose from the selection of popular choices on the site, simply copy the url for the page, paste it as a character string to the relevant palette type in `set_palette()` and run it. `ggpal()` will then apply your chosen theme for the relevant palette type.
+The function is meant to make working with color palettes you can make for free at [https://coolors.co/](https://coolors.co/) easy and straightforward. After you make a color palette or choose from the selection of popular choices on the site, simply copy the url for the page, paste it as a character string to the relevant palette type in `set_palette()` and run. `ggpal()` will then apply your chosen theme for the relevant palette type when you call it.
+
+To use the default values simply run:
+
+```
+set_palette()
+```
+
+Alternatively, to use a custom palette from coolors.co, simply drop in the url. For instance, here's a qualitative palette I picked: [https://coolors.co/ee6352-08b2e3-efe9f4-57a773-484d6d](https://coolors.co/ee6352-08b2e3-efe9f4-57a773-484d6d).
+
+To use it, I would simply run:
+
+```
+set_palette(qualitative = "https://coolors.co/ee6352-08b2e3-efe9f4-57a773-484d6d")
+```
+
+You aren't restricted to only using palettes from coolors.co. You may also input your own "manually." You can do this by setting `from_coolors = FALSE` and then providing a vector of colors. For example:
+
+```
+set_palette(qualitative = c("royalblue", "firebrick", "forestgreen", "gold", "orange"),
+            from_coolors = FALSE)
+```
+
+Note: if you are setting multiple custom palettes, all those palettes must be in the same format---i.e., either all must be from coolors.co or a vector of hexidecimal color codes or color names. If you wanted to have a mixed palette, you can use the `coolors()` function on the url from coolors.co to extract the color codes and convert them to a vector. For instance, say we were to set the qualitative palette using color names and the two-case qualitative palette as a custom palette set at coolors.co. We would write:
+
+```
+set_palette(qualitative = c("royalblue", "firebrick", "forestgreen", "gold", "orange"),
+            binary = coolors("https://coolors.co/ee6352-08b2e3"),
+            from_coolors = FALSE)
+```
 
 ## Example
 
