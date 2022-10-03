@@ -8,7 +8,8 @@ set_palette(
   qualitative = NULL,
   diverging = NULL,
   sequential = NULL,
-  binary = NULL
+  binary = NULL,
+  from_coolors = TRUE
 )
 }
 \arguments{
@@ -19,6 +20,8 @@ set_palette(
 \item{sequential}{The same as the above, but where the palette must contain two and only two colors to indicate the low and high end values of the sequential palette.}
 
 \item{binary}{The same as the above, but where the palette must contain two and only two colors for two distinct qualitative values.}
+
+\item{from_coolors}{Logical value indicating whether the palette comes from coolors.co. Default is \code{TRUE}. If \code{FALSE}, the inputs for the palettes may be user-supplied hexidecimal codes or other valid colors in R's environment.}
 }
 \value{
 The function adds four objects to the global environment for the four unique palette types created by a call to set_palette().
