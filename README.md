@@ -1,8 +1,8 @@
 # coolorrr <img src="inst/logo.png" align="right" height="130" />
 
 ![R-version](https://img.shields.io/badge/R%20%3E%3D-3.4.3-brightgreen)
-![updated](https://img.shields.io/badge/last%20update-09--30--2022-brightgreen)
-![version](https://img.shields.io/badge/version-0.0.1.2100-brightgreen)
+![updated](https://img.shields.io/badge/last%20update-12--17--2022-brightgreen)
+![version](https://img.shields.io/badge/version-0.0.1.300-brightgreen)
 ![license](https://img.shields.io/badge/license-MIT-red)
 ![encoding](https://img.shields.io/badge/encoding-UTF--8-red)
 [![orchid](https://img.shields.io/badge/ORCID-0000--0003--0192--5542-brightgreen)](https://orcid.org/0000-0003-0192-5542)
@@ -21,6 +21,7 @@ devtools::install_github("milesdwilliams15/coolorrr")
 The `{coolorrr}` package provides tools to make the process of porting and using custom color palettes with `ggplot()` easier. The main functions are:
 
   - `set_palette()`
+  - `set_theme()`
   - `ggpal()`
   - `coolors()`
   
@@ -64,11 +65,11 @@ set_palette(qualitative = c("royalblue", "firebrick", "forestgreen", "gold", "or
             from_coolors = FALSE)
 ```
 
-After you've set your palettes, you can use `ggpal()` using the `+ ggpla()` syntax to update the default palettes used by `ggplot()` for aesthetic color or fill mapping. `ggpal()` has three basic commands and also allows you to pass any other commands to standard `{ggplot2}` functions that `ggpal()` calls under the hoold.
+After you've set your palettes, you can use `ggpal()` using the `+ ggpla()` syntax to update the default palettes used by `ggplot()` for aesthetic color or fill mapping. `ggpal()` has three basic commands and also allows you to pass any other commands to standard `{ggplot2}` functions that `ggpal()` calls under the hood.
 
-  - `type`: specifies whether the palette to apply is for the qualitative, divering, sequential, or binary palette;
+  - `type`: specifies whether the palette to apply is for the qualitative, diverging, sequential, or binary palette;
   - `aes`: specifies whether the palette should be applied for the color or fill aesthetic;
-  - `midpoint`: specifies the midpoint value if the divering palette is used.
+  - `midpoint`: specifies the midpoint value if the diverging palette is used.
 
 ## Example
 
