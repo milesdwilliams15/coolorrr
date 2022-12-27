@@ -3,3 +3,4 @@
 export(coolors)
 export(ggpal)
 export(set_palette)
+export(set_theme)
